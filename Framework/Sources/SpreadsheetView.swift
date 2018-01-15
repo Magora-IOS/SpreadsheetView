@@ -324,6 +324,24 @@ public class SpreadsheetView: UIView {
     let cornerView = ScrollView()
     let tableView = ScrollView()
 
+    public var fixedColumnContainer: UIView {
+    	get {
+    		return columnHeaderView
+		}
+	}
+
+    public var fixedRowContainer: UIView {
+    	get {
+    		return rowHeaderView
+		}
+	}
+	
+	public var fixedCornerContainer: UIView {
+		get {
+			return cornerView
+		}
+	}
+
     private var cellClasses = [String: Cell.Type]()
     private var cellNibs = [String: UINib]()
     var cellReuseQueues = [String: ReuseQueue<Cell>]()
